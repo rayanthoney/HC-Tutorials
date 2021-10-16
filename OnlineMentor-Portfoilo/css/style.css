@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+:root {    
+    --HC-bgcolor: #232323;
+    --HC-black: #181818;
+    --HC-opacity-color-text: #707070;
+    --HC-blue: #1785A7;
+    --HC-blue-mint: #C6E2BA;
+    --HC-white: #ffffff;
+    --HC-light-color-text: #BEBEBE;
+    --HC-pomegranate: #ED5565;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    padding: 0 100px 0 100px;
+}
+
+nav ul, 
+.main-info-section,
+.work-category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+body {
+    background-color: var(--HC-bgcolor);
+}
+
+/******************************************
+/* HEADER-NAVIGATION STYLES
+/*******************************************/
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.navbar {
+    background-color: var(--HC-black);
+}
+
+header h1,
+header a,
+.text p, 
+.about h1,
+.skills h1,
+.work h1,
+.contact h1 {
+    color: var(--HC-opacity-color-text);
+}
+
+li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+a {
+    text-decoration: none;
+    font-size: .9rem;
+    text-transform: uppercase;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%);
+}
+
+/******************************************
+/* MAIN-INFO-SECTION STYLES
+/*******************************************/
+
+.main-info-section {
+    height: calc(100vh - 81.6px);
+}
+
+.text {
+    margin-top: 120px;
+}
+
+.text h1 {
+    color: var(--HC-white);
+    font-size: 3rem;
+    cursor: context-menu;
+}
+
+.text span {
+    display: inline-block;
+}
+
+span:hover {
+    color: var(--HC-blue-mint);
+    transition: all .5s;
+}
+
+span.name {
+    color: var(--HC-pomegranate);
+}
+
+span.m-left {
+    margin-left: -10px;
+}
+
+.text p {
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    font-size: 1.8rem;
+}
+
+.text a {
+    padding: 17px 25px;
+    background-color: none;
+    border: 3px solid var(--HC-pomegranate);
+    color: var(--HC-pomegranate);
+    font-size: .8rem;    
+    letter-spacing: 2px;
+    position: relative;
+    top: 80px;
+    overflow: hidden;
+    transition: .5s;
+    display: inline-block;
+}
+
+.text a:hover {
+    color: var(--HC-white);
+}
+
+.text a::before {
+    content: '';
+    background-color: var(--HC-pomegranate);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: .5s;
+}
+
+.text  a:hover::before {
+    height: 100%;
+}
+
+.profile-image img {
+    width: 450px;
+    margin-top: 50px;
+    margin-right: 100px;
+    opacity: .3;
+}
+
+/******************************************
+/* ABOUT ME STYLES
+/*******************************************/
+
+.about {
+    height: 100vh;
+    margin-top: 100px;
+}
+
+.about h1,
+.work h1 {
+    font-size: 10rem;
+    z-index: 0;
+    opacity: .1;
+}
+
+.about-me-info {
+    max-width: 900px;
+    background-color: var(--HC-bgcolor);
+    box-shadow: 0 0 1.2rem rgba(0, 0, 0, .25);
+    padding: 50px;
+    position: relative;
+    top: -70px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.about-me-info p {
+    font-size: 1.3rem;
+    color: var(--HC-light-color-text);
+}
+
+.about-me-info p:nth-child(2),
+.about-me-info p:last-child {
+    margin-top: 30px;
+}
+
+.about img {
+    width: 400px;
+    position: relative;
+    top: -300px;
+    left: calc(100% - 100px);
+    right: calc(100% - 100px);
+    transform: translateX(calc(-100% + 100px));
+}
+
+/******************************************
+/* SKILLS STYLES
+/*******************************************/
+
+.skills {
+    height: 100vh;    
+}
+
+.skills h1,
+.contact h1 {
+text-align: right;
+font-size: 10rem;
+opacity: .1;
+}
+
+.skills-info {
+    font-size: 1.4rem;
+    color: var(--HC-light-color-text);
+    max-width: 800px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.html {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+div[class^='tag-'] {
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 50%, 0% 0%);
+    width: 120px;
+    height: 30px;
+    background-color: var(--HC-blue);
+    margin-right: 30px;
+}
+
+div[class^='tag-'] p {
+    color: var(--HC-white);
+    text-align: left;
+    padding-left: 10px;
+    font-size: 1.1rem;
+    padding-top: 5px;
+}
+
+.progressbar {
+    position: relative;
+    width: 600px;
+    height: 20px;
+    border: 2px solid var(--HC-blue-mint);
+    border-radius: 20px;
+    margin-top: 7px;
+}
+
+div[class^='bar-'] {
+    position: absolute;
+    background-color: var(--HC-blue-mint);
+    height: 10px;
+    border-radius: 20px;
+    margin: 2.7px;
+}
+
+.bar-html,
+.bar-css,
+.bar-javascript,
+.bar-react {
+    width: calc(0 - 6px);
+}
+
+/******************************************
+/* MY WORK STYLES
+/*******************************************/
+
+.work-category button {
+    text-transform: capitalize;
+    border: 3px solid var(--HC-pomegranate);
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: var(--HC-pomegranate);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    background-color: var(--HC-bgcolor);
+    outline: none;
+    cursor: pointer;
+}
+
+div[class^='category-'] {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 20px;
+}
+
+.work a {
+    justify-self: center;
+    position: relative;
+    display: inline-block;
+}
+
+.work-category .active {
+   background-color: var(--HC-pomegranate);
+}
+
+button.active  {
+    color: var(--HC-white);
+}
+
+.work a img {
+    width: 350px;
+    justify-self: center;
+}
+
+div.hideCategory {
+    display: none;
+}
+
+.showCategory {
+    display: block;
+}
+
+/******************************************
+/* FORM STYLES
+/*******************************************/
+
+.contact {
+    margin-top: 50px;
+}
+
+form input,
+form textarea {
+    display: block;
+    width: 500px;    
+    padding: 20px;
+    background-color: var(--HC-bgcolor);
+    border: 3px solid var(--HC-opacity-color-text);
+    margin: 20px 0;
+    outline: none;
+    font-size: 1.2rem;
+    color: var(--HC-white);
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+
+form input:last-child {
+    width: 150px;
+    background-color: var(--HC-pomegranate);
+    border: none;
+    cursor: pointer;
+}
+
+/******************************************
+/* FOOTER STYLES
+/*******************************************/
+
+footer {
+    background-color: var(--HC-black);
+}
+
+footer hr {
+    border: 2px solid var(--HC-opacity-color-text);
+    margin-top: 80px;
+}
+
+footer p {
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--HC-opacity-color-text);
+    font-size: 1.2rem;
+    padding: 20px 0;
+}
+
+footer span {
+    text-transform: uppercase;
+    opacity: .4;
+}
+
+.socials {
+    list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0 10px 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    color: var(--HC-opacity-color-text);
+}
+
+.socials a i {
+    font-size: 2.5rem;
+}
+
+.socials a:hover i {
+    color: var(--HC-blue-mint);
+}
