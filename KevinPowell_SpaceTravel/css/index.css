@@ -1,10 +1,20 @@
 /* -------------------------------- */
+/*  Custom Properties               */
+/* -------------------------------- */
+
+:root {
+   --clr-dark: 230 35% 7%; 
+   --clr-light: 231 77% 90%; 
+   --clr-white: 0 0% 100%; 
+}
+
+/* -------------------------------- */
 /* Reset                            */
 /* -------------------------------- */
 
 /* Box Sizing */
 *, 
-::before,
+*::before,
 *::after {
     box-sizing: border-box;
 }
@@ -24,19 +34,22 @@ picture {
 }
 
 /* Set up the body */
+
 body {
-    line-height: 1.5px;
+    line-height: 1.5;
     min-height: 100vh;
 }
 
 /* make images easier to work with */
+
 img, 
-picture{
+picture {
     max-width: 100%;
     display: block;
 }
 
 /* make form elements easier to work with */
+
 input,
 button,
 textarea,
@@ -45,6 +58,7 @@ select {
 }
 
 /* remove animations for people who've turned them off */
+
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -88,8 +102,17 @@ select {
     border: 0;
 }
 
-.box {
-    background: lightblue;
-    padding: 3rem;
-}
+/* colors */
 
+.bg-dark {background-color: hsl( var(--clr-dark) );}
+.bg-accent {background-color: hsl( var(--clr-light) );}
+.bg-white {background-color: hsl( var(--clr-white) );}
+
+.text-dark {color: hsl( var(--clr-dark) );}
+.text-accent {color: hsl( var(--clr-light) );}
+.text-white {color: hsl( var(--clr-white) );}
+
+
+.example-component {
+    background-color: hsl( var(--clr-light) /.2 );
+}
