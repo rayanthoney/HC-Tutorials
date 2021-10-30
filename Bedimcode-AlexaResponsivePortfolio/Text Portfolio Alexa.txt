@@ -48,3 +48,10 @@ https://www.instagram.com/
 https://twitter.com/
 
 
+footer__social
+https://twitter.com/
+https://www.facebook.com/
+https://www.instagram.com/
+
+
+
