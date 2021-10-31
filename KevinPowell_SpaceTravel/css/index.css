@@ -188,3 +188,19 @@ select {
     font-weight: 700;
     color: hsl( var(--clr-white) /.25 );
 }
+
+
+/* ------------------- */
+/* Components          */
+/* ------------------- */
+
+
+.large-button {
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    padding: 0 2em;
+    aspect-ratio: 1;
+    text-decoration: none;
+}
+
