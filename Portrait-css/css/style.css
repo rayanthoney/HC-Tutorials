@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #000;
+    font-family: monospace;
+}
+
+.wrap {
+    padding: 0%;
+}
+
+p {
+    font-size: 1.2rem;
+    -webkit-text-fill-color: transparent;
+    background: url('/img/profile-pic\ \(3\).png');
+    -webkit-background-clip: text;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
