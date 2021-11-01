@@ -17,6 +17,7 @@ p {
     -webkit-text-fill-color: transparent;
     background: url('/img/profile-pic\ \(3\).png');
     -webkit-background-clip: text;
+    filter: blur(.8px);
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
