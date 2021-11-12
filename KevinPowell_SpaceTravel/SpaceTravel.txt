@@ -8,3 +8,12 @@ Space travel text ....
     because we’ll give you a truly out of this world experience!
 
     
+
+/* ------------------------- */
+/* Glass Morphism            */
+/* ------------------------ */
+
+   backdrop-filter: blur( 1.5rem );
+   -webkit-backdrop-filter: blur( 1.5rem );
+   border-radius: 10px;
+   border: 1px solid rgba( 255, 255, 255, 0.18 );
