@@ -1,5 +1,7 @@
 Portrait text image - idea came from @Prathkum and code I used for reference came from "Background Clip Text - Noah Raskin" at Codepen "https://codepen.io/noahraskin/pen/gOxGBeG?editors=1100".
 
+Also see "https://youtu.be/JNQZWvm0jP4"
+
 My version looks wayyyyyy better bcuz it's ME......
 
 //=====================================================================//

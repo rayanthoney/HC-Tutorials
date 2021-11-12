@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+body {  
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    height: 100vh;
+}
+
+.image__container {
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+p {
+    font-size: 0.6rem;
+    line-height: 0.6rem;    
+    background: url('/img/1612120573-fb-cover-muhammad-ali-the-greatest-hits.jpg');
+    background-attachment: cover;
+    background-repeat: no-repeat;  
+    background-position: center; 
+
+    /* Add text clip effect */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.1);
+
+    /* Add the blur effect */
+   /* filter: blur(0.5px);
+   -webkit-filter: blur(0.5px); */
