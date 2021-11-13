@@ -153,7 +153,6 @@ select {
 
 .grid-container {
     text-align: center;
-    border: 5px solid limegreen;
     display: grid;
     place-items: center;
     padding-inline: 1rem;
@@ -172,12 +171,10 @@ select {
     
     .grid-container > *:first-child {
         grid-column: 2;
-        outline: 1px solid red;
     }
 
     .grid-container > *:last-child {
         grid-column: 3;
-        outline: 1px solid yellow;
     }
 
     .grid-container--home {
@@ -187,11 +184,11 @@ select {
 }
 
 .grid-container > *:first-child {
-    outline: 1px solid red;
+
 }
 
 .grid-container > *:last-child {
-    outline: 1px solid yellow;
+
 }
 
 .sr-only {

@@ -54,7 +54,4 @@ p {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0.1);
-
-    /* Add the blur effect */
-   /* filter: blur(0.5px);
-   -webkit-filter: blur(0.5px); */
+}
