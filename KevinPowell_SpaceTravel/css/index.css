@@ -91,6 +91,8 @@ body {
     
     display: grid;
     grid-template-rows: min-content 1fr;
+
+    overflow-x: hidden;
 }
 
 /* make images easier to work with */
@@ -296,12 +298,15 @@ select {
     background: hsl( var(--clr-dark) / 0.95);
 
     /* Glass Morphism */
-    /* backdrop-filter: blur( 1.5rem );
-    -webkit-backdrop-filter: blur( 1.5rem );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+    /backdrop-filter: blur( 1.5rem );
+    -webkit-backdrop-filter: blur( 1.5rem );    
 }
 
+.mobile-nav-toggle {
+    display: none;
+}
+
+/* Glass Morphism Support */
 @supports (backdrop-filter: blur( 1.5rem )) {
     .primary-navigation{
         background: hsl( var(--clr-white) / 0.5);
@@ -320,9 +325,20 @@ select {
         padding: min(20rem, 15vh) 2rem;
         margin: 0;
         flex-direction: column;
+        transform: translateX(100%);
     }
 
-    .primary-navigation.underline-indicators > .active {
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        right: 1rem;
+        top: 2rem;
+        background: transparent;
+        background-image: url(/img/shared/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        width: 1.5rem;
+        aspect-ratio: 1;
         border: 0;
     }
 }
