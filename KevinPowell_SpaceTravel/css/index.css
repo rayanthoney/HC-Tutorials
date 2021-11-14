@@ -254,7 +254,6 @@ select {
     color: hsl( var(--clr-white) / .25);
 }
 
-
 /* ------------------- */
 /* Compontents         */
 /* ------------------- */
@@ -294,25 +293,33 @@ select {
     list-style: none;
     padding: 0;
     margin: 0;
-    background: hsl( var(--clr-white) / 0.5);
+    background: hsl( var(--clr-dark) / 0.95);
+
     /* Glass Morphism */
-    backdrop-filter: blur( 1.5rem );
+    /* backdrop-filter: blur( 1.5rem );
     -webkit-backdrop-filter: blur( 1.5rem );
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+}
+
+@supports (backdrop-filter: blur( 1.5rem )) {
+    .primary-navigation{
+        background: hsl( var(--clr-white) / 0.5);
+        backdrop-filter: blur( 1.5rem );
+        -webkit-backdrop-filter: blur( 1.5rem );
+    }
 }
 
 @media (max-width: 35rem) {
     .primary-navigation {
-    --underline-gap: .5rem;
-    position: fixed;
-    z-index: 1000;
-    inset: 0 0 0 30%;
-    background: hsl( var(--clr-white) / .1);
-    list-style: none;
-    padding: min(20rem, 15vh) 2rem;
-    margin: 0;
-    flex-direction: column;
+        --underline-gap: .5rem;
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        list-style: none;
+        padding: min(20rem, 15vh) 2rem;
+        margin: 0;
+        flex-direction: column;
     }
 
     .primary-navigation.underline-indicators > .active {
