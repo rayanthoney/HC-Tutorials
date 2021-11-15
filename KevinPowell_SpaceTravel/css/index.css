@@ -290,6 +290,17 @@ select {
     transform: scale(1.5);
 }
 
+/* promary-header */
+
+.logo {
+    margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.primary-header {
+    justify-content: space-between;
+    align-items: center;
+}
+
 .primary-navigation {
     --underline-gap: 2rem;
     list-style: none;
@@ -298,8 +309,17 @@ select {
     background: hsl( var(--clr-dark) / 0.95);
 
     /* Glass Morphism */
-    /backdrop-filter: blur( 1.5rem );
+    backdrop-filter: blur( 1.5rem );
     -webkit-backdrop-filter: blur( 1.5rem );    
+}
+
+.primary-navigation a {
+    text-decoration: none;
+}
+
+.primary-navigation a > span {
+    font-weight: 700;
+    margin-right: .5em;
 }
 
 .mobile-nav-toggle {
@@ -358,15 +378,10 @@ select {
     }
 }
 
-    
-.primary-navigation a {
-    text-decoration: none;
+@media (min-width: 35em) and (max-width: 45em) {
+
 }
 
-.primary-navigation a > span {
-    font-weight: 700;
-    margin-right: .5em;
-}
 
 .underline-indicators > * {
     cursor: pointer;
