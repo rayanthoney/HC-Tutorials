@@ -326,6 +326,7 @@ select {
         margin: 0;
         flex-direction: column;
         transform: translateX(100%);
+        transition: transform 500ms ease-in-out;
     }
 
     .primary-navigation[data-visible="true"] {
@@ -346,6 +347,10 @@ select {
         border: 0;
     }
 }
+
+    .mobile-nav-toggle [aria-expanded="true"] {
+        background-image: url(/img/shared/icon-close.svg);
+    }
 
 .primary-navigation a {
     text-decoration: none;
