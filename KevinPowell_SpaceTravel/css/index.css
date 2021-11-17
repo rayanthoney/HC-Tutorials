@@ -310,8 +310,8 @@ select {
     background: hsl( var(--clr-dark) / 0.95);
 
     /* Glass Morphism */
-    backdrop-filter: blur( 1.5rem );
-    -webkit-backdrop-filter: blur( 1.5rem );    
+    /* backdrop-filter: blur( 1.5rem );
+    -webkit-backdrop-filter: blur( 1.5rem );     */
 }
 
 .primary-navigation a {
