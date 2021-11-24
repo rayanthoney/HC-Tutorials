@@ -4,9 +4,19 @@
 
 :root {
     /* colors */
-    --clr-dark: 230 35% 7%;
-    --clr-light: 231 77% 90%;
-    --clr-white: 0 0% 100%;
+
+    	/* base */
+--clr-dark: 230 33.33% 7.06%;
+--clr-light: 231 77% 90%;
+--clr-white: 0 0% 100%;
+
+    /* colors */
+    /* Mint Text
+    --clr-dark: 230 21% 5%;
+    --clr-light: 245 44% 90%;
+    --clr-white: 75 51% 88%; */
+
+
     
     /* font-sizes */
     --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
@@ -308,8 +318,8 @@ select {
 @supports (backdrop-filter: blur( 1.5rem )) {
     .primary-navigation{
         background: hsl( var(--clr-white) / 0.5);
-        backdrop-filter: blur( 1.5rem );
-        -webkit-backdrop-filter: blur( 1.5rem );
+        backdrop-filter: blur( 1.4rem );
+        -webkit-backdrop-filter: blur( 1.4rem );
     }
 }
 
@@ -487,10 +497,10 @@ body {
 .grid-container--destination {
     --flow-space: 2rem;
     grid-template-areas: 
-    'title'
-    'image'
-    'tabs'
-    'content' ;
+        'title'
+        'image'
+        'tabs'
+        'content';
 }
 
 .grid-container--destination > img {
@@ -518,10 +528,11 @@ body {
         justify-self: start;
         margin-top: 2rem;
     }
-
+    
     .destination-meta {
         flex-direction: row;
-        justify-content: space-evenly
+        justify-content: space-evenly;
+    }
 }
 
 @media (min-width: 45em) {
@@ -531,24 +542,34 @@ body {
         grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
     }
     
-    .grid-container > *:first-child {
-        grid-column: 2;
-    }
-
-    .grid-container > *:last-child {
-        grid-column: 3;
-    }
-
     .grid-container--home {
         padding-bottom: max(6rem, 20vh);
         align-items: end;
     }
-}
+    
+    .grid-container--home > *:first-child {
+        grid-column: 2;
+    }
 
-.grid-container > *:first-child {
+    .grid-container--home > *:last-child {
+        grid-column: 3;
+    }
+    
+    .grid-container--destination {
+        justify-items: start;
+        grid-template-areas: 
+            '. title title .'
+            '. image tabs .'
+            '. image content .';
+    }
+    
+    .grid-container--destination > img {
+        max-width: 90%;
+    }
 
-}
-
-.grid-container > *:last-child {
+    .destination-meta {
+        --gap: 6rem;
+        justify-content: start;
+    }
 
 }

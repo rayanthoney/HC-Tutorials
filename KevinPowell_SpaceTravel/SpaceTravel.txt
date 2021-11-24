@@ -17,3 +17,28 @@ Space travel text ....
    -webkit-backdrop-filter: blur( 1.5rem );
    border-radius: 10px;
    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+
+/* ------------------------- */
+/* Color Pallette            */
+/* ------------------------ */
+
+	/* base */
+--clr-dark: 230 35% 7%;
+--clr-light: 231 77% 90%;
+--clr-white: 0 0% 100%;
+
+	/* Cream */
+    --clr-dark: 230 21% 5%;
+    --clr-light: 245 44% 90%;
+    --clr-white: 25 26% 75%;
+
+	/* Mint */
+    --clr-dark: 230 21% 5%;
+    --clr-light: 245 44% 90%;
+    --clr-white: 75 51% 88%;
+
+	/* xxxxx */
+--clr-dark: 230 35% 7%;
+--clr-light: 231 77% 90%;
+--clr-white: 0 0% 100%;																																						
