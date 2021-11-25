@@ -484,9 +484,9 @@ body {
     padding-bottom: 4rem;
 }
 
-.grid-container p:not(class)  {
-    max-width: 50ch;
-    
+/* == selects all paragraph without a class */
+.grid-container p:not([class]) {
+    max-width: 50ch;  
 }
 
 .numbered-title {
@@ -573,6 +573,7 @@ body {
         max-width: 90%;
     }
 
+    /* == min viewpoort width choose 5vw or 6rem */
     .destination-meta {
         --gap: min(5vw, 6rem);
         justify-content: start;
